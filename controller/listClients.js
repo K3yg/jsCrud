@@ -18,23 +18,34 @@ const createNewRow = (name, email, id) =>{
 }
 const table = document.querySelector("[data-table]")
 
-table.addEventListener("click", (event) =>{
+table.addEventListener("click", async (event) =>{
     let deleteButton = event.target.className === 'botao-simples botao-simples--excluir'
-    if(deleteButton){
-        const clientRow = event.target.closest('[data-id]')
-        let id = clientRow.dataset.id
-        clientService.deleteClient(id)
-        .then(() =>{
+    try{
+        if(deleteButton){
+            const clientRow = event.target.closest('[data-id]')
+            let id = clientRow.dataset.id
+            await clientService.deleteClient(id)
             clientRow.remove()
-        })
+
+        }
+    }
+    catch(error){
+        console.log(error)
+        window.location.href = "../telas/erro.html"
     }
 }) 
 
 const render = async () =>{
-    const listClient = await clientService.listClient()
+    try {
+        const listClient = await clientService.listClient()
         listClient.forEach(element => {
             table.appendChild(createNewRow(element.name, element.email, element.id))
         })
+    }
+    catch(error){
+        console.log(error)
+        window.location.href = "../telas/erro.html"
+    }
 }
 
 render()
