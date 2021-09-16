@@ -1,6 +1,6 @@
 # CRUD JS
 
-Simples projeto de CRUD em JavaScript
+Simples projeto de CRUD usado para cadastro de cliente se seus respectivos dados, utilizando JavaScript.
 
 
 # Instruções
