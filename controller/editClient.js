@@ -7,7 +7,7 @@ import { clientService } from "../service/clientService.js"
     const nameInput = document.querySelector("[data-nome]")
     const emailInput = document.querySelector("[data-email]")
 
-    clientService.clientDetails(id)
+    clientService.detailClient(id)
     .then(data => {
         nameInput.value = data.name
         emailInput.value = data.email
