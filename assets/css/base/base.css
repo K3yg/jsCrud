@@ -27,7 +27,7 @@ body {
 }
 
 @media(min-width: 800px) {
-  .container {
+.container {
 		padding-right: 2.5rem;
 		padding-left: 2.5rem;	
 	}

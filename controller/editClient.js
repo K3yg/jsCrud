@@ -12,3 +12,16 @@ clientService.clientDetails(id)
     emailInput.value = data.email
 
 })
+
+const form = document.querySelector("[data-form]")
+
+form.addEventListener("submit", event => {
+    event.preventDefault()
+    const name = nameInput.value
+    const email = emailInput.value
+
+    clientService.updateClient(id, name, email)
+    .then(() => {
+        window.location.href = "edicao_concluida.html"
+    })
+})

@@ -27,6 +27,23 @@ const deleteClient = (id) => {
     })
 }
 
+const updateClient = (id, name, email) => {
+    return fetch(`http://localhost:3000/profile/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: name,
+            email: email
+        })
+    })
+    .then(response => {
+        return response.json()
+    })
+}
+
+
 const clientDetails = (id) => {
     return fetch(`http://localhost:3000/profile/${id}`)
     .then(response => {
@@ -38,6 +55,7 @@ export const clientService = {
     listClient,
     createClient,
     deleteClient,
-    clientDetails
+    clientDetails,
+    updateClient
 }
 
