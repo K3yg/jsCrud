@@ -1,9 +1,9 @@
-#CRUD JS
+# CRUD JS
 
 Simples projeto de CRUD em JavaScript
 
 
-#Instruções
+# Instruções
 
 Para rodar o servidor, basta abrir a pasta no VSCode e 
 rodar o json server: 
