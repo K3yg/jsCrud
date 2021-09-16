@@ -14,14 +14,14 @@
     --fonte-tamanho-modal-botao: 28px;
     
     --cor-primaria: #0071ea;
-    --cor-secundaria: #d6eaff;
+    --cor-secundaria: #555555;
     --cor-contraste-escuro: #4D4D4D;
     --cor-contraste-claro: #fff;
     --cor-aviso: #df2525;
     --cor-sucesso: #047900;
     --cor-transparencia: #4d4d4d33;
 
-    --sombra: 0 5px 10px #55a6ff38;
+    --sombra: 0 5px 10px #a8a8a838;
 }
 
 @media(min-width: 800px) {

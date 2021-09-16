@@ -30,9 +30,11 @@ table.addEventListener("click", (event) =>{
     }
 }) 
 
-clientService.listClient()
-.then(data => {
-    data.forEach(element => {
-        table.appendChild(createNewRow(element.name, element.email, element.id))
-    })
-})
+const render = async () =>{
+    const listClient = await clientService.listClient()
+        listClient.forEach(element => {
+            table.appendChild(createNewRow(element.name, element.email, element.id))
+        })
+}
+
+render()
